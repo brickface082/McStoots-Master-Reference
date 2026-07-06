@@ -28,6 +28,12 @@ JSON Schema:
   "api_endpoints": []
 }
 
-Coordinate References:
-- Spec completeness checklist: Q2.1
-- Risk classification rules: Q2.2
+## Coordinate Rules
+
+<rule id="Q2.1">
+Build spec completeness gate: every spec must include project_type, stack (language + framework), file_structure, requirements with REQ-xxx IDs, success_criteria per requirement, and risk classification. Incomplete specs cannot proceed to coding.
+</rule>
+
+<rule id="Q2.2">
+Risk classification rules: CRITICAL = auth, payments, data deletion, permissions, security; HIGH = DB queries, API endpoints, file operations; MEDIUM = business logic, forms, data processing; LOW = styling, templates, config, display. Unknown risk defaults to MEDIUM with a warning.
+</rule>

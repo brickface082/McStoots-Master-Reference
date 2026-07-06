@@ -27,3 +27,7 @@ MEDIUM risk: 2 gates, 1 validator, ≥70% coverage.
 <rule id="Q1.7">
 LOW risk: 1 gate, 1 validator, no coverage required.
 </rule>
+
+<rule id="Q1.8">
+Jidoka full-stop: CRITICAL-severity errors (security-class) halt the self-healing loop immediately and escalate to the human — no automatic retry.
+</rule>
