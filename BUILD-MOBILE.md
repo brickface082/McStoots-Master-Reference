@@ -1,17 +1,19 @@
-# BUILD-MOBILE.md — Mobile App Build Standards
+﻿# BUILD-MOBILE.md â€” Mobile App Build Standards
+# Load with CLAUDE.md + BUILD-GENERAL.md
+# Workflow: SOLO or PLAN_EXECUTE · Done: SELF-PROOF required
 # McStoots Tech LLC | Load when building Flutter or React Native apps
 
 ---
 
 ## PLATFORM DECISION
 
-**Flutter** — best choice for most McStoots Tech builds
+**Flutter** â€” best choice for most McStoots Tech builds
 - Single codebase for Android, iOS, web, desktop
 - Hot reload
 - Strong community, 700k+ Google Play apps
 - State management: Riverpod (modern, compile-time safe) or BLoC (enterprise)
 
-**React Native** — use when JavaScript flexibility is required or team knows JS deeply
+**React Native** â€” use when JavaScript flexibility is required or team knows JS deeply
 
 ---
 
@@ -30,20 +32,20 @@ git add . && git commit -m "chore: flutter project init"
 
 ```
 lib/
-├── features/               # FEATURE-FIRST — same principle as React
-│   ├── auth/
-│   │   ├── screens/        # full-page UI
-│   │   ├── widgets/        # reusable UI components for this feature
-│   │   ├── models/         # data models for this feature
-│   │   └── providers/      # state management for this feature
-│   ├── home/
-│   └── settings/
-├── core/                   # app-wide shared code
-│   ├── theme/              # colors, typography, spacing
-│   ├── utils/              # helper functions
-│   └── constants/          # app-wide constants
-├── shared/                 # truly shared widgets across features
-└── main.dart               # entry point only — minimal logic here
+â”œâ”€â”€ features/               # FEATURE-FIRST â€” same principle as React
+â”‚   â”œâ”€â”€ auth/
+â”‚   â”‚   â”œâ”€â”€ screens/        # full-page UI
+â”‚   â”‚   â”œâ”€â”€ widgets/        # reusable UI components for this feature
+â”‚   â”‚   â”œâ”€â”€ models/         # data models for this feature
+â”‚   â”‚   â””â”€â”€ providers/      # state management for this feature
+â”‚   â”œâ”€â”€ home/
+â”‚   â””â”€â”€ settings/
+â”œâ”€â”€ core/                   # app-wide shared code
+â”‚   â”œâ”€â”€ theme/              # colors, typography, spacing
+â”‚   â”œâ”€â”€ utils/              # helper functions
+â”‚   â””â”€â”€ constants/          # app-wide constants
+â”œâ”€â”€ shared/                 # truly shared widgets across features
+â””â”€â”€ main.dart               # entry point only â€” minimal logic here
 ```
 
 ---

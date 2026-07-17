@@ -1,4 +1,6 @@
 # BUILD-WEB.md — Web Build Standards
+# Load with CLAUDE.md + BUILD-GENERAL.md for web work
+# Workflow: SOLO or PLAN_EXECUTE · Done: SELF-PROOF required
 # McStoots Tech LLC | Load when building web projects (HTML, JS, React, TypeScript)
 
 ---

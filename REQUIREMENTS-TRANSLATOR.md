@@ -1,3 +1,5 @@
+﻿> **OPTIONAL / EXPERIMENTAL** — not default one-prompt path. Prefer SOLO/PLAN_EXECUTE in CLAUDE.md.
+
 # Requirements Translator Agent
 
 **Role ID:** translator

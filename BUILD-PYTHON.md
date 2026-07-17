@@ -1,5 +1,8 @@
 # BUILD-PYTHON.md — Python Build Standards
-# McStoots Tech LLC | Load when building Python projects
+# Load with CLAUDE.md + BUILD-GENERAL.md for Python work
+
+**Workflow:** SOLO or PLAN_EXECUTE per `AGENT-WORKFLOW-POLICY.md`.  
+**Done:** runnable DONE WHEN + SELF-PROOF required.
 
 ---
 

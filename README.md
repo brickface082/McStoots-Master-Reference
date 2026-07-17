@@ -1,63 +1,55 @@
 # McStoots Master Reference
 
-**McStoots Tech LLC** — SOPs, quality gates, and agent rules for AI-assisted building.
+**McStoots Tech LLC** — SOPs for AI-assisted building.  
+**Version:** 4.0  
+**Repo:** https://github.com/brickface082/McStoots-Master-Reference
 
-**Owner:** Chris McStoots (`brickface082`)  
-**Repo:** https://github.com/brickface082/McStoots-Master-Reference  
-**Version:** 3.2
+---
 
-**North star:** One prompt → a **working** model, app, or site. Working product beats dirt-cheap; still avoid multi-agent waste. See [AGENT-WORKFLOW-POLICY.md](AGENT-WORKFLOW-POLICY.md).
+## North star
 
-**Conversation filing cabinet (Grok):** `C:\Users\brick\McStoots-Docs\` — Desktop shortcut “McStoots-Docs (Grok filing)”.
+**One prompt → a working model, app, or site.**  
+Working product beats dirt-cheap. Avoid multi-agent waste.
+
+| Default workflow | When |
+|------------------|------|
+| **SOLO** | Clear goal, small/medium change |
+| **PLAN_EXECUTE** | Multi-file / structure risk |
+| **Not default** | 3+ agent handoff chains |
+
+Decision rules: [AGENT-WORKFLOW-POLICY.md](AGENT-WORKFLOW-POLICY.md)
 
 ---
 
 ## Start here
 
-1. Read **[INDEX.md](INDEX.md)** every session.
-2. Always load **[CLAUDE.md](CLAUDE.md)** for build work.
-3. Load only the stack / mode files you need (see INDEX).
+1. [INDEX.md](INDEX.md) — what to load  
+2. [CLAUDE.md](CLAUDE.md) — always-on rules  
+3. Stack file if coding (`BUILD-WEB.md`, etc.)
+
+**Thin load = cheaper + better compliance.** Do not load every file.
 
 ---
 
-## What’s in this repo
+## Conversation findings (Grok)
+
+`C:\Users\brick\McStoots-Docs\`  
+Desktop: **McStoots-Docs (Grok filing)**
+
+---
+
+## Layout
 
 | Area | Files |
 |------|--------|
-| Always-on rules | `CLAUDE.md` |
-| Session map | `INDEX.md` |
-| Core build SOP | `BUILD-GENERAL.md` |
-| Stack standards | `BUILD-PYTHON.md`, `BUILD-WEB.md`, `BUILD-MOBILE.md`, `BUILD-EMBEDDED.md` |
-| Operator / teaching | `OPERATOR-CHECKLIST.md`, `TEACH.md`, `NEW-PROJECT-STARTUP.md` |
-| Quality | `QUALITY-GATES.md`, `QUALITY-GATES-CORE.md`, `QUALITY-GATES-TOOLS.md` |
-| Full coding / operator playbooks | `USE-FOR-CODING.md`, `USE-FOR-OPERATOR.md` |
-| Pipeline agents | `REQUIREMENTS-TRANSLATOR.md`, `SANDBOX-EXECUTOR.md`, `SOP-ENFORCER-AGENT.md` |
-| Hard constraints | `POKA-YOKE-CONSTRAINTS.md`, `SOP-PROCESS-RULES.md` |
-| Ops | `WATCHDOG.md` |
-| Archive / master backup | `MASTER-BACKUP-COMPLETE-SOP.md` |
-| Smoke test | `hmi_simple_test.py` |
+| Core | `CLAUDE.md`, `INDEX.md`, `AGENT-WORKFLOW-POLICY.md`, `BUILD-GENERAL.md` |
+| Stack | `BUILD-PYTHON/WEB/MOBILE/EMBEDDED.md` |
+| Quality | `QUALITY-GATES.md`, `POKA-YOKE-CONSTRAINTS.md` |
+| Human | `OPERATOR-CHECKLIST.md`, `TEACH.md`, `NEW-PROJECT-STARTUP.md` |
+| Experimental multi-agent | Enforcer, translator, sandbox, process rules (optional) |
 
 ---
 
-## Filename convention
+## Definition of done (all agents)
 
-All SOP files use **short, stable names** (e.g. `BUILD-PYTHON.md`).  
-No spaces or em-dashes in filenames so agents, scripts, and GitHub links stay reliable.
-
----
-
-## How agents should use this
-
-- **SOP Enforcer:** see `SOP-ENFORCER-AGENT.md` — maps task type → SOP files.
-- **Coordinate tags:** `P1.x` (poka-yoke), `Q1.x` / `Q2.x` / `Q3.x` (quality), `S1.x` (process).
-- Prefer loading `INDEX.md` + `CLAUDE.md` first; do not dump the whole repo into context.
-
----
-
-## Local path (OpenClaw workspace)
-
-If you run OpenClaw on this machine, a checkout may also live at:
-
-`C:\Users\brick\.openclaw\workspace\McStoots-Master-Reference`
-
-Treat **this GitHub repo** as the source of truth. Pull before long sessions.
+Runnable **DONE WHEN** + **SELF-PROOF** with PASS. No proof → not done.

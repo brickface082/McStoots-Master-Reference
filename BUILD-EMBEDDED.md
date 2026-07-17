@@ -1,15 +1,17 @@
-# BUILD-EMBEDDED.md — Embedded and Hardware Build Standards
+﻿# BUILD-EMBEDDED.md â€” Embedded and Hardware Build Standards
+# Load with CLAUDE.md + BUILD-GENERAL.md
+# Workflow: SOLO or PLAN_EXECUTE · Done: SELF-PROOF required
 # McStoots Tech LLC | Load when building C, C++, Arduino, ESP-IDF projects
 
 ---
 
-## SAFETY FIRST — READ BEFORE ANY HARDWARE TEST
+## SAFETY FIRST â€” READ BEFORE ANY HARDWARE TEST
 
 1. Simulate first if at all possible
 2. Define ALL failure modes before powering on
 3. Document expected current draw, voltage, and timing
 4. Test with safe input and limited power first
-5. Never assume environment — verify with the actual device
+5. Never assume environment â€” verify with the actual device
 
 ---
 
@@ -17,23 +19,23 @@
 
 ```
 project_root/
-├── src/
-│   ├── main/               # main application
-│   │   └── main.c
-│   ├── common/             # shared utilities
-│   │   └── utils.c
-│   └── drivers/            # hardware abstraction layer
-├── include/                # all header files
-│   ├── main/
-│   └── common/
-├── lib/                    # external libraries
-├── tests/                  # unit tests
-│   └── unit_tests/
-├── docs/                   # schematics, pinouts, datasheets
-├── config/
-│   └── linker_scripts/
-├── CMakeLists.txt          # or Makefile
-└── README.md
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ main/               # main application
+â”‚   â”‚   â””â”€â”€ main.c
+â”‚   â”œâ”€â”€ common/             # shared utilities
+â”‚   â”‚   â””â”€â”€ utils.c
+â”‚   â””â”€â”€ drivers/            # hardware abstraction layer
+â”œâ”€â”€ include/                # all header files
+â”‚   â”œâ”€â”€ main/
+â”‚   â””â”€â”€ common/
+â”œâ”€â”€ lib/                    # external libraries
+â”œâ”€â”€ tests/                  # unit tests
+â”‚   â””â”€â”€ unit_tests/
+â”œâ”€â”€ docs/                   # schematics, pinouts, datasheets
+â”œâ”€â”€ config/
+â”‚   â””â”€â”€ linker_scripts/
+â”œâ”€â”€ CMakeLists.txt          # or Makefile
+â””â”€â”€ README.md
 ```
 
 ---
@@ -53,20 +55,20 @@ project_root/
 
 ---
 
-## NASA POWER OF 10 — MANDATORY FOR ALL EMBEDDED CODE
+## NASA POWER OF 10 â€” MANDATORY FOR ALL EMBEDDED CODE
 
 These rules apply to every file. No exceptions.
 
-1. **Simple control flow** — no goto, no recursion, no deeply nested conditionals
-2. **Bounded loops** — every loop has a hard maximum iteration count defined before the loop
-3. **No dynamic memory in critical paths** — allocate at init, not during operation
-4. **Functions fit on one screen** — if it scrolls, split it
-5. **Two assertions per function minimum** — one on input, one on output
-6. **Variables at smallest scope** — declare inside the block where used
-7. **Check every return value** — if a function can fail, the caller checks
-8. **Readable code** — no magic numbers, no clever tricks, no abbreviations
-9. **One level of dereference** — no pointer-to-pointer-to-pointer chains
-10. **Zero warnings** — compile with maximum warnings. All warnings are errors.
+1. **Simple control flow** â€” no goto, no recursion, no deeply nested conditionals
+2. **Bounded loops** â€” every loop has a hard maximum iteration count defined before the loop
+3. **No dynamic memory in critical paths** â€” allocate at init, not during operation
+4. **Functions fit on one screen** â€” if it scrolls, split it
+5. **Two assertions per function minimum** â€” one on input, one on output
+6. **Variables at smallest scope** â€” declare inside the block where used
+7. **Check every return value** â€” if a function can fail, the caller checks
+8. **Readable code** â€” no magic numbers, no clever tricks, no abbreviations
+9. **One level of dereference** â€” no pointer-to-pointer-to-pointer chains
+10. **Zero warnings** â€” compile with maximum warnings. All warnings are errors.
 
 ---
 
@@ -80,7 +82,7 @@ These rules apply to every file. No exceptions.
  * @return 0 on success, -1 on error
  */
 int read_temperature(uint8_t sensor_pin, float* reading) {
-    /* Input assertions — NASA Rule 5 */
+    /* Input assertions â€” NASA Rule 5 */
     assert(sensor_pin <= 39);
     assert(reading != NULL);
     
@@ -88,7 +90,7 @@ int read_temperature(uint8_t sensor_pin, float* reading) {
     float raw = analogRead(sensor_pin);
     *reading = (raw / 4095.0f) * 100.0f;
     
-    /* Output assertion — NASA Rule 5 */
+    /* Output assertion â€” NASA Rule 5 */
     assert(*reading >= -40.0f && *reading <= 125.0f);
     
     return 0;
@@ -101,7 +103,7 @@ int read_temperature(uint8_t sensor_pin, float* reading) {
 
 ```c
 /* sensor.h */
-#ifndef SENSOR_H        /* Include guard — required on every header */
+#ifndef SENSOR_H        /* Include guard â€” required on every header */
 #define SENSOR_H
 
 #include <stdint.h>     /* Standard fixed-width types */
@@ -134,8 +136,8 @@ Required for any code where failure causes physical risk:
 - No dynamic memory allocation after init
 - No goto
 - No continue
-- Array indexing only — no pointer arithmetic
-- Explicit casting — no implicit type conversions
+- Array indexing only â€” no pointer arithmetic
+- Explicit casting â€” no implicit type conversions
 - No unreachable code
 
 ---
@@ -144,7 +146,7 @@ Required for any code where failure causes physical risk:
 
 ```cpp
 void setup() {
-    // Hardware init goes here — all of it, before loop()
+    // Hardware init goes here â€” all of it, before loop()
     Serial.begin(9600);
     pinMode(LED_PIN, OUTPUT);
     sensor_init(SENSOR_PIN);

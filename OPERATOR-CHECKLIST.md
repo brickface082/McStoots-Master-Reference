@@ -1,20 +1,29 @@
 # OPERATOR-CHECKLIST.md — Chris Pre-Build Checklist
-# McStoots Tech LLC | Run before every build session
+# Run before a build when you want a high hit-rate one-prompt
 
 ---
 
 ## THE ONE SENTENCE RULE
 
-If you cannot describe what you want to build in one clear sentence,
-you are not ready to build it yet.
-Five minutes of thinking saves an hour of rework.
+If you cannot describe what you want in one clear sentence,
+you are not ready. Five minutes of thinking saves an hour of rework.
 
 ---
 
-## PRE-FLIGHT CHECKLIST
+## WORKFLOW HINT (for the agent)
 
-Answer every question before sending the first prompt.
-Claude will ask these before proceeding. There are no shortcuts.
+| Your prompt looks like… | Agent should use |
+|-------------------------|------------------|
+| Clear GOAL + stack + DONE WHEN, small scope | **SOLO** |
+| New app / many files / “build me a system” | **PLAN_EXECUTE** |
+
+Agent policy: `AGENT-WORKFLOW-POLICY.md`
+
+---
+
+## PRE-FLIGHT (best one-prompt quality)
+
+Fill what you can. Agent may assume the rest in ONE-PROMPT mode.
 
 **Q1 — What exactly am I building?**
 One sentence. A stranger reads it and knows exactly what the thing does.
@@ -34,10 +43,10 @@ OS. Language. Device. Existing code. Version numbers you know.
 Things that absolutely cannot be violated.
 No internet. Android only. Free hosting. Under 10MB. No paid libraries.
 
-**Q6 — What does done look like exactly?**
-Write the binary pass/fail condition.
+**Q6 — What does done look like exactly? (runnable check)**
+Binary pass/fail the agent can run or simulate.
 Bad: It works correctly.
-Good: Script reads test.csv with 3 rows, prints "Sent 3 messages", shows each name. Any other output is a fail.
+Good: `python app.py` prints "Sent 3 messages" for test.csv with 3 rows.
 
 **Q7 — What are you NOT building?**
 At least one thing that is explicitly out of scope.

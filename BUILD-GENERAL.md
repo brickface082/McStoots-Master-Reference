@@ -1,162 +1,132 @@
 # BUILD-GENERAL.md — Core Build SOP
-# McStoots Tech LLC | Load for any coding session alongside CLAUDE.md
+# Load with CLAUDE.md for any coding session
 
 ---
 
-## EXECUTION LOOP — THE ENGINE
+## MODE
 
-Run in this exact order. Never skip. Never reorder.
+**Default: ONE-PROMPT BUILD**
 
-1. Spec-first protocol — get approval
-2. Paper thinking — map input, process, output, failure modes
-3. Task list — get Chris approval before execution
-4. ONE task using structured prompt format
-5. Build MFVP — single file, hardcoded values allowed, no polish
-6. Run immediately
-7. Capture results using error feedback format
-8. Fix ONE issue only
-9. Retest
-10. Log state
-11. Repeat until stable
-12. Prove working — multiple tests, edge cases, failure handling
-13. Expand ONLY after proof
+- Infer missing details; list assumptions (≤5).  
+- Do **not** wait for multi-step human approval to start MFVP.  
+- Ask Chris only if: missing secrets, destructive/irreversible external action, or illegal/impossible goal.
+
+**Collab mode** (only if Chris says so): ask before each phase.
 
 ---
 
-## SPEC-FIRST PROTOCOL
+## CHOOSE WORKFLOW
 
-Before any code. No exceptions.
+See `AGENT-WORKFLOW-POLICY.md` and `CLAUDE.md`.
 
-**Step 1 — Claude asks until all answered:**
-- What does this do in one sentence?
-- Who uses it and how?
-- What are the inputs and outputs?
-- What are the hard constraints?
-- What does failure look like?
-- What does success look like exactly?
-
-**Step 2 — Spec file:**
-```
-SYSTEM:       What this does (1-2 lines)
-INPUTS:       What goes in
-OUTPUTS:      What comes out
-CORE FLOW:    input → process → output
-STACK:        Language / framework / platform / OS / versions
-CONSTRAINTS:  Hard limits
-SUCCESS:      Exact binary pass/fail condition
-FAILURE MODES: Where it can break
-```
-
-**Step 3 — Chris approves. No code until approved.**
+| Situation | Workflow |
+|-----------|----------|
+| Clear + small/medium | **SOLO** |
+| Multi-file / structure risk | **PLAN_EXECUTE** |
+| Almost works | **GEN_REGEN** (same agent) |
 
 ---
 
-## PAPER THINKING — REQUIRED AFTER SPEC
+## EXECUTION LOOP (short)
 
 ```
-[INPUT] → [PROCESS] → [OUTPUT]
-               ↓
-         [FAILURE MODES]
+1. Capture GOAL / CONTEXT / CONSTRAINTS / DONE WHEN (runnable)
+2. Pick SOLO or PLAN_EXECUTE
+3. [If PLAN] short plan only — files, MFVP boundary, DONE WHEN, out-of-scope
+4. Build MFVP (real code)
+5. SELF-PROOF (run the check)
+6. Fix ONE issue if FAIL (max 3 attempts → Andon)
+7. STOP when PASS — expand only after proof
 ```
 
-Minimum: inputs, outputs, transformations, failure points, simplest path.
+Do not reorder. Do not skip 5–7.
 
 ---
 
-## TASK SYSTEM
+## SPEC (lightweight, one-prompt)
+
+If Chris did not give full GOAL block, invent the minimum and label assumptions:
 
 ```
-T001 — [smallest testable first step, max 15 min]
-T002 — [only after T001 passes]
-T003 — [continues until proof]
+SYSTEM:        one sentence
+INPUTS / OUTPUTS:
+STACK:
+CONSTRAINTS:
+DONE WHEN:     runnable check
+OUT OF SCOPE:
 ```
 
-Rules:
-- Each task = 5–15 minutes maximum
-- Each task independently testable
-- Max 40 instructions per task — no monolithic plans
-- Claude proposes, Chris approves before execution
+Full multi-question interview is **optional** (collab mode), not required for every build.
 
 ---
 
-## TOKEN BUDGET PER TASK
+## PAPER THINKING (keep tiny)
 
-Each task gets a maximum of 3 attempts to pass its Done When condition.
-If 3 attempts fail, Claude stops, runs Five Whys, surfaces the problem to Chris.
-No silent continuation. No fourth guess.
+One line: `INPUT → PROCESS → OUTPUT` + top 1–3 failure modes.  
+Skip long essays.
 
 ---
 
-## ERROR FEEDBACK FORMAT
+## TASKS
+
+- Prefer **one** MFVP task that hits DONE WHEN.  
+- Split only if blocked after a failed attempt.  
+- Max 3 attempts per DONE WHEN → Andon + Five Whys.
+
+---
+
+## ERROR FEEDBACK
 
 ```
-INPUT:    What you gave it
-EXPECTED: What should have happened
-ACTUAL:   What actually happened
-ERROR:    Exact error message
+INPUT:
+EXPECTED:
+ACTUAL:
+ERROR:
 ```
 
 ---
 
-## THREE-PASS REVIEW PROTOCOL
+## SELF-PROOF (required before done)
 
-Run before declaring any build complete.
-
-**Pass 1 — Structural:** Does code match spec? Hallucinated features? Missing features?
-**Pass 2 — Requirement:** Does it actually solve the original problem? Test against Done When.
-**Pass 3 — Consistency:** Naming uniform? No contradictions between modules? Style consistent?
-
----
-
-## FINAL OUTPUT REQUIREMENT
-
-Every build session ends with all five:
-1. Working code that runs
-2. How to run it
-3. Test cases with known inputs and expected outputs
-4. Known failure points and how they are handled
-5. Next improvement step
+```
+Check:
+Expected:
+Result: PASS | FAIL
+Evidence:
+```
 
 ---
 
-## CLAUDE-SPECIFIC FAILURE MODES
+## FINAL OUTPUT (session end)
+
+1. Working code  
+2. How to run  
+3. SELF-PROOF  
+4. Known limits  
+5. Next optional improvement (do not implement yet)
+
+---
+
+## FAILURE MODES (watch for)
 
 | Failure | Fix |
 |---------|-----|
-| Starting before understanding goal | Spec-first protocol mandatory |
-| Task dumping — doing everything at once | Task system enforced |
-| Fake tests / mock data | Gate 2 — real code only |
-| Context drift across sessions | State tracking log mandatory |
-| Over-engineering | MFVP first, KISS gate before every expansion |
-| Environment blindness | Context packing — OS, stack, versions in every prompt |
-| Self-review false confidence | Gate 5 cross-review with explicit framing |
-| Infinite retry spiral | Three-strike rule — hard stop at 3 |
-| Touching files not asked | Gate 1 scope check |
-| Assuming instead of asking | Spec-first protocol requires questions first |
+| Start without DONE WHEN | Write runnable check first |
+| Task dump / overbuild | MFVP only |
+| Mocks / fake tests | Real code gate |
+| Infinite retries | Three-strike |
+| Scope creep | Surgical rule |
+| Multi-agent by habit | SOLO / PLAN_EXECUTE only |
+| Approval stall on clear goals | One-prompt mode — proceed |
 
 ---
 
-## FMEA — RUN BEFORE BUILDING ANYTHING THAT HANDLES DATA
+## FMEA (data/auth/payments only)
 
-Before the MFVP, list the top 3 failure modes:
-1. What can go wrong? (likelihood 1–10)
-2. What happens if it does? (severity 1–10)
-3. How detectable before damage? (detectability 1–10)
-
-Multiply L × S ÷ D. Design against highest numbers first.
-
----
-
-## FIVE WHYS — RUN WHEN THREE-STRIKE FIRES
-
-Ask why five times. Fix the root cause, not the symptom.
-
-Example: Function returned wrong value → Why? No input validation → Why? Not in spec → Why? Skipped FMEA → Why? In a hurry to start coding. Root cause: skipped FMEA. Fix the process, not just the code.
+Before MFVP on sensitive data: top 3 failure modes (likelihood × severity). Design against worst first.
 
 ---
 
 ## SIMPLICITY GATE
 
-Before expanding: does a simpler version pass the Done When condition?
-If yes, build simpler first.
-Every line of code is a potential failure point.
+If a simpler design still passes DONE WHEN → build that first.

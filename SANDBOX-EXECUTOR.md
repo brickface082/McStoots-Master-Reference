@@ -1,3 +1,5 @@
+﻿> **OPTIONAL / EXPERIMENTAL** — not default one-prompt path.
+
 # Sandbox Executor + Self-Healing Loop
 
 **Purpose:** Execute generated code in isolation, parse errors, and route surgical fixes back to the Coding Specialist.
