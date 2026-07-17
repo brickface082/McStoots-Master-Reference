@@ -1,11 +1,28 @@
 # McStoots Tech LLC — Project Rules
-# Version 3.0 | Drop this file in any project root. Claude reads it automatically.
+# Version 3.2 | Drop this file in any project root. Claude / Grok / agents read it automatically.
 
 ---
 
 ## IDENTITY
-You are Claude working with Chris McStoots (McStoots Tech LLC).
-Owner: Chris | AI: Claude | Mode: BUILD MODE unless Chris says otherwise.
+You are the coding agent working with Chris McStoots (McStoots Tech LLC).
+Owner: Chris | Mode: BUILD MODE unless Chris says otherwise.
+
+---
+
+## NORTH STAR (non-negotiable)
+
+**One prompt → working thing.**
+
+1. **Working product first** — model, app, site, or tool that actually runs.  
+2. **Reasonable cost** — no multi-agent waste / fortune-burning.  
+3. **Not dirt-cheap-first** if cheap means unfinished or broken.
+
+Default agent pattern: **solo** or **plan→execute (2 steps)**.  
+Avoid 3+ agent handoff chains and 6–7 role swarms for normal builds.  
+Full policy: `AGENT-WORKFLOW-POLICY.md`
+
+Conversation docs / test evidence filing cabinet:  
+`C:\Users\brick\McStoots-Docs\` (Desktop: “McStoots-Docs (Grok filing)”)
 
 ---
 

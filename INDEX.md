@@ -1,5 +1,5 @@
 # McStoots Master Reference — Session Index
-# Version 3.1 | READ THIS FIRST every session
+# Version 3.2 | READ THIS FIRST every session
 
 ---
 
@@ -8,6 +8,10 @@
 This is the McStoots Tech LLC AI coding and teaching system.  
 Built by Chris McStoots. Continuously improved.  
 GitHub: https://github.com/brickface082/McStoots-Master-Reference
+
+**North star:** One prompt → **working** build. Working product beats dirt-cheap.  
+**Agent policy:** `AGENT-WORKFLOW-POLICY.md` (solo or plan→execute; avoid multi-agent tax).  
+**Grok filing cabinet (find conversation docs fast):** `C:\Users\brick\McStoots-Docs\`
 
 ---
 
@@ -26,6 +30,7 @@ GitHub: https://github.com/brickface082/McStoots-Master-Reference
 | What we are doing | Load this file |
 |-------------------|----------------|
 | Any build (always active) | `CLAUDE.md` |
+| How many agents / workflow pattern | `AGENT-WORKFLOW-POLICY.md` |
 | General coding, any language | `BUILD-GENERAL.md` |
 | Python project | `BUILD-PYTHON.md` |
 | Web / HTML / JS / React | `BUILD-WEB.md` |
@@ -45,6 +50,7 @@ GitHub: https://github.com/brickface082/McStoots-Master-Reference
 | SOP router agent (multi-agent) | `SOP-ENFORCER-AGENT.md` |
 | Crash / resume protocol | `WATCHDOG.md` |
 | Full historical backup dump | `MASTER-BACKUP-COMPLETE-SOP.md` |
+| Conversation findings / shootouts (not SOPs) | `C:\Users\brick\McStoots-Docs\` |
 
 ---
 
@@ -92,6 +98,7 @@ GitHub: https://github.com/brickface082/McStoots-Master-Reference
 | `SANDBOX-EXECUTOR.md` | Sandbox + self-healing loop |
 | `SOP-ENFORCER-AGENT.md` | SOP enforcer agent system prompt |
 | `WATCHDOG.md` | Crash / resume protocol |
+| `AGENT-WORKFLOW-POLICY.md` | One-prompt goal; solo vs multi-agent; quality over dirt-cheap |
 | `MASTER-BACKUP-COMPLETE-SOP.md` | Monolithic backup of core SOPs |
 | `hmi_simple_test.py` | Simple HMI end-to-end smoke test |
 
@@ -138,5 +145,6 @@ GitHub: https://github.com/brickface082/McStoots-Master-Reference
 - v2.2 — Added Aviation CRM sterile cockpit, WHO surgical pause points, SUBSAFE OQE, mise en place, constraint log, five planning conversations, marginal gains
 - v3.0 — Full restructure. Modular file system. Karpathy four laws, context window protocol, deployable CLAUDE.md
 - v3.1 — Stable short filenames (no spaces/em-dashes). INDEX complete. SOP Enforcer + Watchdog published. Coordinate tags Q/P/S fully indexed. README restored.
+- v3.2 — North star: one prompt → working build. AGENT-WORKFLOW-POLICY (solo/plan_execute; multi-agent nerfed). Quality > dirt-cheap. Filing cabinet: McStoots-Docs.
 
 *This is a living system. Every session that teaches us something new gets logged here.*

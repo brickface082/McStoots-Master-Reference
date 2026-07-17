@@ -4,7 +4,11 @@
 
 **Owner:** Chris McStoots (`brickface082`)  
 **Repo:** https://github.com/brickface082/McStoots-Master-Reference  
-**Version:** 3.1
+**Version:** 3.2
+
+**North star:** One prompt → a **working** model, app, or site. Working product beats dirt-cheap; still avoid multi-agent waste. See [AGENT-WORKFLOW-POLICY.md](AGENT-WORKFLOW-POLICY.md).
+
+**Conversation filing cabinet (Grok):** `C:\Users\brick\McStoots-Docs\` — Desktop shortcut “McStoots-Docs (Grok filing)”.
 
 ---
 
