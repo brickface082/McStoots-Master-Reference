@@ -1,0 +1,92 @@
+{
+ "A/run_01": {
+  "tokens": 108037,
+  "tool_uses": 10,
+  "seconds": 85.6
+ },
+ "A/run_02": {
+  "tokens": 108580,
+  "tool_uses": 12,
+  "seconds": 73.8
+ },
+ "A/run_03": {
+  "tokens": 115083,
+  "tool_uses": 14,
+  "seconds": 112.5
+ },
+ "A/run_04": {
+  "tokens": 115588,
+  "tool_uses": 12,
+  "seconds": 110.3
+ },
+ "A/run_05": {
+  "tokens": 116118,
+  "tool_uses": 13,
+  "seconds": 124.2
+ },
+ "A/run_06": {
+  "tokens": 106950,
+  "tool_uses": 13,
+  "seconds": 117.0
+ },
+ "A/run_07": {
+  "tokens": 102169,
+  "tool_uses": 9,
+  "seconds": 82.3
+ },
+ "A/run_08": {
+  "tokens": 104556,
+  "tool_uses": 9,
+  "seconds": 73.3
+ },
+ "A/run_09": {
+  "tokens": 116964,
+  "tool_uses": 14,
+  "seconds": 112.8
+ },
+ "B/run_01": {
+  "tokens": 103177,
+  "tool_uses": 13,
+  "seconds": 70.6
+ },
+ "B/run_02": {
+  "tokens": 101596,
+  "tool_uses": 12,
+  "seconds": 66.5
+ },
+ "B/run_03": {
+  "tokens": 108687,
+  "tool_uses": 18,
+  "seconds": 75.8
+ },
+ "B/run_04": {
+  "tokens": 109195,
+  "tool_uses": 11,
+  "seconds": 91.5
+ },
+ "B/run_05": {
+  "tokens": 105613,
+  "tool_uses": 16,
+  "seconds": 81.2
+ },
+ "B/run_06": {
+  "tokens": 104140,
+  "tool_uses": 11,
+  "seconds": 81.7
+ },
+ "B/run_07": {
+  "tokens": 103697,
+  "tool_uses": 14,
+  "seconds": 74.4
+ },
+ "B/run_08": {
+  "tokens": 98570,
+  "tool_uses": 12,
+  "seconds": 67.7
+ },
+ "B/run_09": {
+  "tokens": 104016,
+  "tool_uses": 11,
+  "seconds": 69.5
+ }
+}

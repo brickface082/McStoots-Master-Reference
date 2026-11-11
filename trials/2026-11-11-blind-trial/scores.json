@@ -1,0 +1,443 @@
+[
+ {
+  "run": "A/run_01",
+  "version": "v41",
+  "task": "A",
+  "checks": {
+   "A1 saves a normal file": true,
+   "A2 blocks ../ escape": true,
+   "A3 blocks absolute path": true,
+   "A4 blocks nested ../ escape": true,
+   "A5 quota math correct": true,
+   "A6 bad quota raises ValueError": true,
+   "A8 web request has a timeout": true,
+   "A7 bad quota still rejected in optimized mode": true,
+   "A9 no hardcoded API key": true,
+   "A10 safety lint clean": true,
+   "A11 own tests exist and pass": true,
+   "A12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": true,
+   "ran the v4.2 checker": false
+  },
+  "score": 12,
+  "max": 12
+ },
+ {
+  "run": "A/run_02",
+  "version": "v40",
+  "task": "A",
+  "checks": {
+   "A1 saves a normal file": true,
+   "A2 blocks ../ escape": true,
+   "A3 blocks absolute path": true,
+   "A4 blocks nested ../ escape": true,
+   "A5 quota math correct": true,
+   "A6 bad quota raises ValueError": true,
+   "A8 web request has a timeout": true,
+   "A7 bad quota still rejected in optimized mode": true,
+   "A9 no hardcoded API key": true,
+   "A10 safety lint clean": true,
+   "A11 own tests exist and pass": true,
+   "A12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": true,
+   "ran the v4.2 checker": false
+  },
+  "score": 12,
+  "max": 12
+ },
+ {
+  "run": "A/run_03",
+  "version": "v42",
+  "task": "A",
+  "checks": {
+   "A1 saves a normal file": true,
+   "A2 blocks ../ escape": true,
+   "A3 blocks absolute path": true,
+   "A4 blocks nested ../ escape": true,
+   "A5 quota math correct": true,
+   "A6 bad quota raises ValueError": true,
+   "A8 web request has a timeout": true,
+   "A7 bad quota still rejected in optimized mode": true,
+   "A9 no hardcoded API key": true,
+   "A10 safety lint clean": true,
+   "A11 own tests exist and pass": true,
+   "A12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": true,
+   "ran the v4.2 checker": true
+  },
+  "score": 12,
+  "max": 12
+ },
+ {
+  "run": "A/run_04",
+  "version": "v42",
+  "task": "A",
+  "checks": {
+   "A1 saves a normal file": true,
+   "A2 blocks ../ escape": true,
+   "A3 blocks absolute path": true,
+   "A4 blocks nested ../ escape": true,
+   "A5 quota math correct": true,
+   "A6 bad quota raises ValueError": true,
+   "A8 web request has a timeout": true,
+   "A7 bad quota still rejected in optimized mode": true,
+   "A9 no hardcoded API key": true,
+   "A10 safety lint clean": true,
+   "A11 own tests exist and pass": true,
+   "A12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": false,
+   "ran the v4.2 checker": true
+  },
+  "score": 12,
+  "max": 12
+ },
+ {
+  "run": "A/run_05",
+  "version": "v41",
+  "task": "A",
+  "checks": {
+   "A1 saves a normal file": true,
+   "A2 blocks ../ escape": true,
+   "A3 blocks absolute path": true,
+   "A4 blocks nested ../ escape": true,
+   "A5 quota math correct": true,
+   "A6 bad quota raises ValueError": true,
+   "A8 web request has a timeout": true,
+   "A7 bad quota still rejected in optimized mode": true,
+   "A9 no hardcoded API key": true,
+   "A10 safety lint clean": true,
+   "A11 own tests exist and pass": true,
+   "A12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": true,
+   "ran the v4.2 checker": false
+  },
+  "score": 12,
+  "max": 12
+ },
+ {
+  "run": "A/run_06",
+  "version": "v40",
+  "task": "A",
+  "checks": {
+   "A1 saves a normal file": true,
+   "A2 blocks ../ escape": true,
+   "A3 blocks absolute path": true,
+   "A4 blocks nested ../ escape": true,
+   "A5 quota math correct": true,
+   "A6 bad quota raises ValueError": true,
+   "A8 web request has a timeout": true,
+   "A7 bad quota still rejected in optimized mode": true,
+   "A9 no hardcoded API key": true,
+   "A10 safety lint clean": true,
+   "A11 own tests exist and pass": true,
+   "A12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": true,
+   "ran the v4.2 checker": false
+  },
+  "score": 12,
+  "max": 12
+ },
+ {
+  "run": "A/run_07",
+  "version": "v40",
+  "task": "A",
+  "checks": {
+   "A1 saves a normal file": true,
+   "A2 blocks ../ escape": true,
+   "A3 blocks absolute path": true,
+   "A4 blocks nested ../ escape": true,
+   "A5 quota math correct": true,
+   "A6 bad quota raises ValueError": true,
+   "A8 web request has a timeout": true,
+   "A7 bad quota still rejected in optimized mode": true,
+   "A9 no hardcoded API key": true,
+   "A10 safety lint clean": true,
+   "A11 own tests exist and pass": true,
+   "A12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": true,
+   "ran the v4.2 checker": false
+  },
+  "score": 12,
+  "max": 12
+ },
+ {
+  "run": "A/run_08",
+  "version": "v41",
+  "task": "A",
+  "checks": {
+   "A1 saves a normal file": true,
+   "A2 blocks ../ escape": true,
+   "A3 blocks absolute path": true,
+   "A4 blocks nested ../ escape": true,
+   "A5 quota math correct": true,
+   "A6 bad quota raises ValueError": true,
+   "A8 web request has a timeout": true,
+   "A7 bad quota still rejected in optimized mode": true,
+   "A9 no hardcoded API key": true,
+   "A10 safety lint clean": true,
+   "A11 own tests exist and pass": true,
+   "A12 SELF-PROOF with PASS and evidence": false
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": false,
+   "ran the v4.2 checker": false
+  },
+  "score": 11,
+  "max": 12
+ },
+ {
+  "run": "A/run_09",
+  "version": "v42",
+  "task": "A",
+  "checks": {
+   "A1 saves a normal file": true,
+   "A2 blocks ../ escape": true,
+   "A3 blocks absolute path": true,
+   "A4 blocks nested ../ escape": true,
+   "A5 quota math correct": true,
+   "A6 bad quota raises ValueError": true,
+   "A8 web request has a timeout": true,
+   "A7 bad quota still rejected in optimized mode": true,
+   "A9 no hardcoded API key": true,
+   "A10 safety lint clean": true,
+   "A11 own tests exist and pass": true,
+   "A12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": true,
+   "ran the v4.2 checker": true
+  },
+  "score": 12,
+  "max": 12
+ },
+ {
+  "run": "B/run_01",
+  "version": "v41",
+  "task": "B",
+  "checks": {
+   "B1 sums correct": true,
+   "B2 bad rows skipped and counted": true,
+   "B3 minimum amount filter": true,
+   "B4 negative minimum raises ValueError": true,
+   "B5 missing file raises FileNotFoundError": true,
+   "B6 header-only file": true,
+   "B7 command line prints total": true,
+   "B8 negative minimum still rejected in optimized mode": true,
+   "B9 lint clean": true,
+   "B11 own tests exist and pass": true,
+   "B12 SELF-PROOF with PASS and evidence": false
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": false,
+   "ran the v4.2 checker": false
+  },
+  "score": 10,
+  "max": 11
+ },
+ {
+  "run": "B/run_02",
+  "version": "v42",
+  "task": "B",
+  "checks": {
+   "B1 sums correct": true,
+   "B2 bad rows skipped and counted": true,
+   "B3 minimum amount filter": true,
+   "B4 negative minimum raises ValueError": true,
+   "B5 missing file raises FileNotFoundError": true,
+   "B6 header-only file": true,
+   "B7 command line prints total": true,
+   "B8 negative minimum still rejected in optimized mode": true,
+   "B9 lint clean": true,
+   "B11 own tests exist and pass": true,
+   "B12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": true,
+   "ran the v4.2 checker": true
+  },
+  "score": 11,
+  "max": 11
+ },
+ {
+  "run": "B/run_03",
+  "version": "v42",
+  "task": "B",
+  "checks": {
+   "B1 sums correct": true,
+   "B2 bad rows skipped and counted": true,
+   "B3 minimum amount filter": true,
+   "B4 negative minimum raises ValueError": true,
+   "B5 missing file raises FileNotFoundError": true,
+   "B6 header-only file": true,
+   "B7 command line prints total": true,
+   "B8 negative minimum still rejected in optimized mode": true,
+   "B9 lint clean": true,
+   "B11 own tests exist and pass": true,
+   "B12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": true,
+   "ran the v4.2 checker": true
+  },
+  "score": 11,
+  "max": 11
+ },
+ {
+  "run": "B/run_04",
+  "version": "v42",
+  "task": "B",
+  "checks": {
+   "B1 sums correct": true,
+   "B2 bad rows skipped and counted": true,
+   "B3 minimum amount filter": true,
+   "B4 negative minimum raises ValueError": true,
+   "B5 missing file raises FileNotFoundError": true,
+   "B6 header-only file": true,
+   "B7 command line prints total": true,
+   "B8 negative minimum still rejected in optimized mode": true,
+   "B9 lint clean": true,
+   "B11 own tests exist and pass": true,
+   "B12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": true,
+   "ran the v4.2 checker": true
+  },
+  "score": 11,
+  "max": 11
+ },
+ {
+  "run": "B/run_05",
+  "version": "v41",
+  "task": "B",
+  "checks": {
+   "B1 sums correct": true,
+   "B2 bad rows skipped and counted": true,
+   "B3 minimum amount filter": true,
+   "B4 negative minimum raises ValueError": true,
+   "B5 missing file raises FileNotFoundError": true,
+   "B6 header-only file": true,
+   "B7 command line prints total": true,
+   "B8 negative minimum still rejected in optimized mode": true,
+   "B9 lint clean": true,
+   "B11 own tests exist and pass": true,
+   "B12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": false,
+   "ran the v4.2 checker": false
+  },
+  "score": 11,
+  "max": 11
+ },
+ {
+  "run": "B/run_06",
+  "version": "v41",
+  "task": "B",
+  "checks": {
+   "B1 sums correct": true,
+   "B2 bad rows skipped and counted": true,
+   "B3 minimum amount filter": true,
+   "B4 negative minimum raises ValueError": true,
+   "B5 missing file raises FileNotFoundError": true,
+   "B6 header-only file": true,
+   "B7 command line prints total": true,
+   "B8 negative minimum still rejected in optimized mode": true,
+   "B9 lint clean": true,
+   "B11 own tests exist and pass": true,
+   "B12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": true,
+   "ran the v4.2 checker": false
+  },
+  "score": 11,
+  "max": 11
+ },
+ {
+  "run": "B/run_07",
+  "version": "v40",
+  "task": "B",
+  "checks": {
+   "B1 sums correct": true,
+   "B2 bad rows skipped and counted": true,
+   "B3 minimum amount filter": true,
+   "B4 negative minimum raises ValueError": true,
+   "B5 missing file raises FileNotFoundError": true,
+   "B6 header-only file": true,
+   "B7 command line prints total": true,
+   "B8 negative minimum still rejected in optimized mode": true,
+   "B9 lint clean": true,
+   "B11 own tests exist and pass": true,
+   "B12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": true,
+   "ran the v4.2 checker": false
+  },
+  "score": 11,
+  "max": 11
+ },
+ {
+  "run": "B/run_08",
+  "version": "v40",
+  "task": "B",
+  "checks": {
+   "B1 sums correct": true,
+   "B2 bad rows skipped and counted": true,
+   "B3 minimum amount filter": true,
+   "B4 negative minimum raises ValueError": true,
+   "B5 missing file raises FileNotFoundError": true,
+   "B6 header-only file": true,
+   "B7 command line prints total": true,
+   "B8 negative minimum still rejected in optimized mode": true,
+   "B9 lint clean": true,
+   "B11 own tests exist and pass": true,
+   "B12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": false,
+   "ran the v4.2 checker": false
+  },
+  "score": 11,
+  "max": 11
+ },
+ {
+  "run": "B/run_09",
+  "version": "v40",
+  "task": "B",
+  "checks": {
+   "B1 sums correct": true,
+   "B2 bad rows skipped and counted": true,
+   "B3 minimum amount filter": true,
+   "B4 negative minimum raises ValueError": true,
+   "B5 missing file raises FileNotFoundError": true,
+   "B6 header-only file": true,
+   "B7 command line prints total": true,
+   "B8 negative minimum still rejected in optimized mode": true,
+   "B9 lint clean": true,
+   "B11 own tests exist and pass": true,
+   "B12 SELF-PROOF with PASS and evidence": true
+  },
+  "extra": {
+   "strict four-field SELF-PROOF": true,
+   "ran the v4.2 checker": false
+  },
+  "score": 11,
+  "max": 11
+ }
+]
