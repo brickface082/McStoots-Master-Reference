@@ -1,0 +1,16 @@
+# McStoots SOP v4.2 — tool-enforced rules for Python.
+# Each code below enforces a written rule, so the agent does not have to remember it.
+# Run with:  python checks/run_checks.py <path>
+
+[lint]
+select = [
+    "E9",    # Q3.0  file must parse (syntax errors)
+    "F",     # Q3.1  real bugs: undefined names, unused imports; F403 = P1.8 wildcard imports
+    "E722",  # P1.7  no bare `except:`
+    "S608",  # P1.1  no SQL built from strings (injection)
+    "S105",  # P1.5  no hardcoded secret assigned to a variable
+    "S106",  # P1.5  no hardcoded secret passed as an argument
+    "S107",  # P1.5  no hardcoded secret as a default value
+    "S113",  # P1.6  every HTTP request has a timeout
+    "S324",  # P1.2  (partial) no weak hashes such as md5/sha1
+]
